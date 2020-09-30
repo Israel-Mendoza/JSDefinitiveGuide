@@ -1,4 +1,4 @@
-// Arithmetic operations with number
+// ANALIZING SPECIAL NUMBER VALUES
 
 // INFINITY
 
