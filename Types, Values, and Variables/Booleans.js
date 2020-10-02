@@ -47,3 +47,8 @@ for (let value of truthy_literals) {
 // As I mentioned before, [object Object] is true!  -- {}
 // As I mentioned before,   is true!  -- " "
 // As I mentioned before, 1 is true!
+
+"BOOLEAN METHODS"
+
+let a = true;
+a.toString(); // => "true"
