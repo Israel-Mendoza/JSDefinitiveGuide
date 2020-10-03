@@ -14,8 +14,8 @@ let falsy_literals = [
 
 let truthy_literals = [
     true,
-    [],
-    {},
+    [], // All objects are true!
+    {}, // All objects are true!
     " ",
     1
 ]
