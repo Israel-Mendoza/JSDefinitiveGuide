@@ -1,4 +1,4 @@
-"ANALIZING SPECIAL NUMBER VALUES"
+"WORKING WITH NUMBERS"
 
 // INFINITY
 
@@ -67,3 +67,40 @@ BigInt(Number.MAX_SAFE_INTEGER + 1);
 2 > 1n; // => true
 0 == 0n; // => true
 0 === 0n; // => false: the === checks for type equality as well
+
+"USEFUL METHODS"
+
+// Number toString() method
+
+let n = 25;
+let m = 3.1415926535;
+n.toString(2); // => "11001";
+"0b" + n.toString(2); // binary == "0b10001"
+"0o" + n.toString(8); // octal == "0o31"
+"0x" + n.toString(16); // hex == "0x11"
+
+"PARSING FUNCTIONS"
+
+/*Parsing functions ignore leading white space and parse
+as many numeric characters as they can.
+parseInt will treat the passed value as hexadecimal
+if it starts with 0x or 0X. */
+
+parseInt("3 blind mice"); // => 3
+parseFloat(" 3.14 meters"); // => 3.14
+parseInt("-12.34"); // => -12
+parseInt("0xFF"); // => 255
+parseInt("0xff"); // => 255
+parseInt("-0XFF"); // => -255
+parseFloat(".1"); // => 0.1
+parseInt("0.1"); // => 0
+parseInt(".1"); // => NaN: integers can't start with "."
+parseFloat("$72.47"); // => NaN: numbers can't start with "$"
+
+// Using base parameter (2, 8, 16 or 36)
+
+parseInt("11", 2) // => 3: (1*2 + 1)
+parseInt("ff", 16) // => 255: (15*16 + 15)
+parseInt("zz", 36) // => 1295: (35*36 + 35)
+parseInt("077", 8) // => 63: (7*8 + 7)
+parseInt("077", 10) // => 77: (7*10 + 7)
