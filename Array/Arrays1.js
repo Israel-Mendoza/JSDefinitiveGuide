@@ -81,7 +81,7 @@ console.log(threeItemArray);
 // [ 1, 2, 3 ]
 
 
-/*
+/**
  * Creating an array with "Array.from()";
  */
 
@@ -97,6 +97,21 @@ console.log(trueCopy);
 let duplicatedTrueCopy = Array.from(trueCopy, (x) => x * 2);
 console.log(duplicatedTrueCopy);
 // [ 2, 4, 6 ]
+
+
+/**
+ * Array.isArray()
+ * A static method that tests if an object is an array.
+ */
+
+
+let anArrayObject = [1, 4, 6, 7, 9];
+let anObject = { a: "A", b: "B" };
+
+console.log(Array.isArray(anArrayObject));
+// true
+console.log(Array.isArray(anObject));
+// false
 
 
 /**
